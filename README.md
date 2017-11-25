@@ -5,7 +5,7 @@ This project is a basic command cli for github api 4.
 Right now, the only useful command is to retrieve the GitHub user's favourite programming language. 
 
 ## How to use
-
+0. (Optional) Modify the github-api-token in \config\config.yml. The provided one is restricted is restricted to certain operations.
 1. Clone this repository: `git clone https://github.com/miguepintor/github-node-cli`
 2. Download dependencies:
 ```bash
