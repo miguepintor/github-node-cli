@@ -1,6 +1,6 @@
 # github-node-cli
 
-This project is a basic command cli for github api 4.
+This project is a basic node command cli for github api 4.
 
 Right now, the only useful command is to retrieve the GitHub user's favourite programming language. 
 
