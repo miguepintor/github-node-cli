@@ -1,0 +1,48 @@
+{
+  "name": "github-node-cli",
+  "version": "0.0.1",
+  "description": "Command line tool to retrieve best guess of the GitHub user's favourite language",
+  "keywords": [
+    "node project",
+    "nodejs project",
+    "eslint",
+    "mocha",
+    "istanbul",
+    "code coverage",
+    "gulp",
+    "es6",
+    "babel",
+    "node-github-graphql"
+  ],
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguepintor/github-node-cli.git"
+  },
+  "author": "Miguel Pintor <miwe08@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguepintor/github-node-cli/issues"
+  },
+  "homepage": "https://github.com/miguepintor/github-node-cli",
+  "engines": {
+    "node": "8.8.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-help": "^1.6.1",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-jsdoc3": "^0.3.0",
+    "gulp-mocha": "^2.2.0",
+    "isparta": "^3.0.3",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "nconf": "^0.8.4",
+    "nconf-yaml": "^1.0.2",
+    "commander": "^2.9.0",
+    "node-github-graphql":"0.2.6"
+  }
+}
