@@ -24,7 +24,7 @@ node .\github.js -h
 
   Usage: github [options] [command]
 
-  Contact management system
+  Github node cli
 
 
   Options:
