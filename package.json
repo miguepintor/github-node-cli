@@ -12,7 +12,8 @@
     "gulp",
     "es6",
     "babel",
-    "node-github-graphql"
+    "node-github-graphql",
+    "express"
   ],
   "main": "",
   "repository": {
@@ -37,12 +38,16 @@
     "gulp-jsdoc3": "^0.3.0",
     "gulp-mocha": "^2.2.0",
     "isparta": "^3.0.3",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1"
   },
   "dependencies": {
     "nconf": "^0.8.4",
     "nconf-yaml": "^1.0.2",
     "commander": "^2.9.0",
-    "node-github-graphql":"0.2.6"
+    "node-github-graphql":"0.2.6",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2"
   }
 }

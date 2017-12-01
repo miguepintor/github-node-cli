@@ -6,7 +6,7 @@ const QueriesDefinitions = require('../../src/core/queries');
 describe('queries.js', () => {
   it('if the user has no repository then the preferred language is undefined', () => {
     let output = {data : { user: { repositories: { nodes : []}}}};
-    assert.ok(QueriesDefinitions.preferredLanguage.parseOutput(output) === undefined);
+    assert.equal(QueriesDefinitions.preferredLanguage.parseOutput(output), undefined);
   });
 });
 

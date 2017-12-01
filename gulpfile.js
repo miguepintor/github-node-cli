@@ -27,6 +27,7 @@ gulp.task('lint', 'Validates code with "eslint"', function (done) {
 });
 
 gulp.task('test', 'Runs tests and generates code coverage report', function (done) {
+  process.env.NODE_ENV = 'test';
   gulp.src(SRC_FILES)
     .pipe(istanbul({
       instrumenter: isparta.Instrumenter,
@@ -41,7 +42,7 @@ gulp.task('test', 'Runs tests and generates code coverage report', function (don
         }))
         .pipe(istanbul.enforceThresholds({
           thresholds: {
-            global: 70
+            global: 80
           }
         }))
         .on('finish', done);

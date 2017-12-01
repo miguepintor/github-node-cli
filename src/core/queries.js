@@ -62,6 +62,7 @@ const queries = {
       }}`;
     },
     (output) => {
+      let language;
 
       let counts = {};
       //iterates over all the user repos collecting the ocurrences in an object called counts.
@@ -80,8 +81,10 @@ const queries = {
       let keys = Object.keys(counts);
       if(keys.length > 0) {
         //reduce the object (counts) to the max.
-        return keys.reduce(function(a, b){ return counts[a] > counts[b] ? a : b; });
+        language = keys.reduce(function(a, b){ return counts[a] > counts[b] ? a : b; });
       }
+
+      return language;
     })  
 };
 

@@ -13,14 +13,22 @@ class QueryManager{
   /**
    * Executes a query.
    * @param {object} query Query object to be executed.
-   * @return {void}
+   * @return {string} Parsed query result or error.
    */
   static async doAQuery(query){
     try{
       let output = await api.query(query.getContent(), {});
-      console.log(query.parseOutput(output));
+      let parsedOutput = query.parseOutput(output);
+
+      if (process.env.NODE_ENV !== 'test') {
+        //avoid logs on test
+        console.log(parsedOutput);
+      }
+
+      return parsedOutput;
     } catch (err) {
-      console.log(err.message);
+      //the library is internally login the errors
+      return err;
     } 
   }
 }

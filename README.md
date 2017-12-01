@@ -1,8 +1,7 @@
 # github-node-cli
+This project is a basic node command cli for github api 4 (also added a rest api).
 
-This project is a basic node command cli for github api 4.
-
-Right now, the only useful command is to retrieve the GitHub user's favourite programming language. 
+Right now, the only useful command is to retrieve the GitHub user's favourite programming language.
 
 ## How to use
 0. (Optional) Modify the github-api-token in \config\config.yml. The provided one is restricted is restricted to certain operations.
@@ -19,9 +18,7 @@ gulp build
 ```bash
 node .\github.js -h
 ```
-
 ## Available commands
-
   Usage: github [options] [command]
 
   Github node cli
@@ -45,8 +42,18 @@ node .\github.js gpl miguepintor
 ```bash
 node .\github.js tokenOwner
 ```
-## Linting
 
+## Available REST service
+A rest service have been added using the same core.
+
+Run the rest service using:
+```bash
+node .\server.js
+```
+Then test it with:
+http://localhost:5000/Query/PreferredLanguage/miguepintor
+
+## Linting
 ```bash
 gulp lint
 ```
@@ -58,7 +65,6 @@ Code that will be validated:
 - **gulpfile.js**
 
 ## Running tests and generating code coverage report
-
 ```bash
 gulp test
 ```
@@ -68,7 +74,6 @@ Test cases stored in files **test/\*\*/\*.test.js** will be run only
 Coverage reports will be generated and stored in folder **docs/coverage**
 
 ## Generating jsdoc
-
 ```bash
 gulp jsdoc
 ```
@@ -76,7 +81,6 @@ gulp jsdoc
 Documentation will be generated for **\*.js** files from **src** folder and stored in folder **docs/jsdoc**
 
 ## Running all tasks
-
 ```bash
 gulp
 # or
@@ -84,9 +88,15 @@ gulp build
 ```
 
 ## Printing all available tasks and theirs arguments
-
 ```bash
 gulp help
+```
+## Configuration variables
+Available in config.yml:
+```
+name: <app name>
+github-api-token: <necessary api token to do the queries>
+rest-port: <rest service port>
 ```
 
 ## Directory Layout
